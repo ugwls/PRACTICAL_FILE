@@ -9,9 +9,9 @@
 
 def Search_Country():
     name = input("Enter Country name: ")
-    for i in country:
-        if country[i] == name:
-            print(f'Population of the Country is : {country[i][0]}')
+    for keys, values in country.items():
+        if keys == name:
+            print(f'{keys} has {values} Population.')
 
 
 def Delete_Country():
@@ -38,7 +38,7 @@ while k == True:
                 print("Enter Details of Country No.", i+1)
                 name = input("Country Name: ")
                 population = int(input("Country Population: "))
-                country[name] = [population]
+                country[name] = population
         elif option == 2:
             Search_Country()
         elif option == 3:

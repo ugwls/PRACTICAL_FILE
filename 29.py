@@ -1,9 +1,17 @@
+# Remove all the lines that contain the character
+# `a' in a file and write it to another file.
 
-k = True
-while k == True:
-    option = input('Do you want to check more no.(y/n): ').lower()
-    if option == 'y':
-        continue
-    else:
-        k = False
-        
+
+with open("hp.txt", "w")as fo:
+    fo.write("Harry Potter")
+    fo.write("There is a difference in all harry potter books\nWe can see it as harry grows\nthe books were written by J.K rowling ")
+
+fo = open('hp.txt', 'r')
+fi = open('writehp.txt', 'w')
+l = fo.readlines()
+for i in l:
+    if 'a' in i:
+        i = i.replace('a', '')
+        fi.write(i)
+fi.close()
+fo.close()
