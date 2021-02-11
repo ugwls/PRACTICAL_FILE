@@ -1,9 +1,6 @@
+# Write a Python program to check whether an element
+# exists within a tuple.
 
-k = True
-while k == True:
-    option = input('Do you want to check more no.(y/n): ').lower()
-    if option == 'y':
-        continue
-    else:
-        k = False
-        
+arr = tuple(map(str, input('Enter a list of numbers: ').split(',')))
+element = input('Enter element to check: ')
+print(element in arr)

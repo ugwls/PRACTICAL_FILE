@@ -2,10 +2,13 @@
 # employees and display all information in ascending
 # order of their employee number
 
-k = True
-while k == True:
-    option = input('Do you want to check more no.(y/n): ').lower()
-    if option == 'y':
-        continue
-    else:
-        k = False
+n = int(input("Enter number of Employee: "))
+emp = {}
+for i in range(n):
+    print("Enter Details of Employee No.", i+1)
+    Empno = int(input("Employee No: "))
+    name = input("Name: ")
+    emp[Empno] = [name]
+ascending = list((emp.items()))
+ascending.sort()
+print(ascending)
