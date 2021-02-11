@@ -1,3 +1,6 @@
+# WAP to input employee number and name for ‘N’
+# employees and display all information in ascending
+# order of their employee number
 
 k = True
 while k == True:
@@ -6,4 +9,3 @@ while k == True:
         continue
     else:
         k = False
-        
