@@ -24,7 +24,7 @@ while k == True:
         print(f'Element is present at index {result}')
     else:
         print("Element is not present in array")
-    option = input('Do you want to check more no.(y/n): ').lower()
+    option = input('Do you want to try again.(y/n): ').lower()
     if option == 'y':
         continue
     else:

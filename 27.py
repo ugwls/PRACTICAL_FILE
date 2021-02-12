@@ -12,7 +12,6 @@ def Add_data():
         for _ in range(0, a):
             name = input("Enter Student Name: ")
             roll = int(input("Enter Student Roll no.: "))
-
             temp = (name, roll)
             data.append(temp)
         pickle.dump(data, f)

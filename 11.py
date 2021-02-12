@@ -16,7 +16,7 @@ while k == True:
     for i in range(len(arr)):
         print(f'{arr[i]},', end='')
     print()
-    option = input('Do you want to to try again(y/n): ').lower()
+    option = input('Do you want to try again(y/n): ').lower()
     if option == 'y':
         continue
     else:

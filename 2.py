@@ -14,7 +14,7 @@ while k == True:
         print(num, "is a neither prime NOR composite number")
     else:
         print(num, "is NOT a prime number it is a COMPOSITE number")
-    option = input('Do you want to check more no.(y/n): ').lower()
+    option = input('Do you Want to try again(y/n): ').lower()
     if option == 'y':
         continue
     else:

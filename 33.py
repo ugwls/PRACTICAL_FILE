@@ -6,7 +6,7 @@
 
 import os
 
-file_name = input("Enter file name: ")
+file_name = input("Enter file name(with file extention): ")
 
 if os.path.exists(file_name):
     os.remove(file_name)

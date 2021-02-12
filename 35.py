@@ -6,7 +6,7 @@
 # 4.	Display all the Customer Details
 # 5.	Exit
 
-# csv_rowlist = [["SN", "Movie", "Protagonist"], [1, "Lord of the Rings", "Frodo Baggins"],[2, "Harry Potter", "Harry Potter"]]
+
 import csv
 
 

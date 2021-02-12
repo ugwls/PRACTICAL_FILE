@@ -9,7 +9,7 @@ while k == True:
     for i in range(0, len(arr) - 1):
         if arr[i] == x:
             print(f'Entered no. is in the list, At index number: {arr[i]}')
-    option = input('Do you want to to try again(y/n): ').lower()
+    option = input('Do you want to try again(y/n): ').lower()
     if option == 'y':
         continue
     else:

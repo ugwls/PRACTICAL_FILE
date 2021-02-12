@@ -10,7 +10,7 @@ def add():
     name = input('Enter product name: ')
     temp = (id, name)
     with open('product.txt', "a") as f:
-        f.write(f'{temp}\n')
+        f.write(f'{temp} \n')
     print('product added successfully')
     input('Press ENTER to continue...')
 
@@ -25,13 +25,13 @@ def see():
 
 
 def Search():
-    with open("product.txt", "r") as f:
+    with open("product.txt", "r")as f:
         d = f.readlines()
-        d = [x.strip('\n') for x in d]
+        d = [eval(x.strip('\n')) for x in d]
     name = input('Enter product name to Search: ')
     for i in range(0, len(d) - 1):
         if d[i][1] == name:
-            print(d[i])
+            print(f'productinfo is {d[i]}')
 
 
 k = True

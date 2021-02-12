@@ -26,12 +26,11 @@ def ShowDoc():
     print(Doctor)
 
 
-k = True
 while k == True:
     print('''
-1. Push Docinfo
-2. Delete Docinfo
-3. See Doctor
+1. Push Values
+2. Delete Values
+3. See Values
 4. Exit
     ''')
     option = int(input('Enter your option(1/4): '))

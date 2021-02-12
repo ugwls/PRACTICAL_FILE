@@ -23,7 +23,7 @@ k = True
 while k == True:
     arr = list(map(int, input('Enter a list of numbers: ').split(',')))
     Armstrong(arr)
-    option = input('Do you want to check more no.(y/n): ').lower()
+    option = input('Do you want to try again.(y/n): ').lower()
     if option == 'y':
         continue
     else:

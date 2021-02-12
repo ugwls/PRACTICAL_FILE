@@ -13,7 +13,7 @@ while k == True:
     arr = list(map(int, input('Enter a list of numbers: ').split(',')))
     x = int(input('Enter a number: '))
     print("element found at index "+str(linearsearch(arr, x)))
-    option = input('Do you want to check more no.(y/n): ').lower()
+    option = input('Do you want to try again.(y/n): ').lower()
     if option == 'y':
         continue
     else:

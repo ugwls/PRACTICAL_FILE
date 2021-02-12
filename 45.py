@@ -7,7 +7,7 @@ import mysql.connector
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="Ujjw@l.16",
+    passwd="dps123",
     charset='utf8')
 cur = mydb.cursor()
 cur.execute('create database if not exists parctical')
