@@ -10,29 +10,30 @@ def Add_data():
     with open("tele.dat", 'ab') as f:
         a = int(input('Enter how many record to add: '))
         for _ in range(0, a):
-            name = input("Enter Student Name: ")
             roll = int(input("Enter Student Roll no.: "))
-            temp = (name, roll)
+            name = input("Enter Student Name: ")
+            temp = (roll, name)
             data.append(temp)
         pickle.dump(data, f)
 
 
 def Show_data():
+    k = True
     with open("tele.dat", 'rb') as f:
         data = pickle.load(f)
         tele = int(input('Enter Student Roll no.: '))
-        print(data)
-        for i in range(0, len(data)):
-            if data[i][1] == tele:
-                print(f'Name corresponds to {data[i][1]} is {data[i][0]}')
-        else:
+        for i in data:
+            if i[0] == tele:
+                print(f'Name corresponds to {i[0]} is {i[1]}')
+                k = False
+        if k:
             print('Data not found!!')
 
 
 while True:
     print('''
 1. Add data.
-2. To show data.
+2. To Search data.
 3. Exit.
     ''')
     options = int(input('Enter a option(1-3):'))

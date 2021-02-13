@@ -4,14 +4,15 @@ queue = []
 
 
 def Insert():
-    n = int(input('Enter how many values you want to insert: '))
+    n = int(input('Enter how many no. you want to insert: '))
     for _ in range(0, n):
-        value = int(input('Enter value: '))
-        Doctor.append(value)
+        value = int(input('Enter no.: '))
+        queue.append(value)
 
 
 def Delete():
-    queue.pop()
+    queue.pop(0)
+    print('Done')
 
 
 def Show():

@@ -1,10 +1,8 @@
 # Write a menu driven program to add and manipulate data
 # from customer.csv file. Give function to do the following:
-# 1.	Add Customer Details
-# 2.	Search Customer Details
-# 3.	Remove Customer Details
-# 4.	Display all the Customer Details
-# 5.	Exit
+# 1.Add Customer Details, 2.Search Customer Details
+# 3.Remove Customer Details
+# 4.Display all the Customer Details, 5.Exit
 
 
 import csv
@@ -35,25 +33,28 @@ def search():
         reader = csv.reader(f)
         for row in reader:
             data.append(row)
-    name = input('Enter customer name to search info: ')
-    for i in range(1, len(data) - 1):
-        if data[i][1] == name:
-            print(f'Customer no. {data[i][0]} and Name is {data[i][1]}')
+    id = input('Enter customer ID to search info: ')
+    for i in data:
+        if i[0] == id:
+            print(f'Customer no. {i[0]} and Name is {i[1]}')
 
 
 def remove():
     data = []
+    new_data = []
     with open('customer.csv', 'r') as f:
         reader = csv.reader(f)
         for row in reader:
             data.append(row)
+    print(data)
     name = input('Enter customer name to delete info: ')
-    for i in range(1, len(data) - 1):
-        if data[i][1] == name:
-            data.pop(i)
-            with open('customer.csv', 'w', newline='') as f:
-                writer = csv.writer(f)
-                writer.writerows(data)
+    with open('customer.csv', 'w', newline='') as f:
+        f.truncate(0)
+        for i in data:
+            if i[1] != name:
+                new_data.append(i)
+        writer = csv.writer(f)
+        writer.writerows(new_data)
 
 
 k = True

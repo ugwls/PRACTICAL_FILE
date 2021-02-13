@@ -19,13 +19,15 @@ def InsertDoc():
 
 
 def DeleteDoc():
-    Doctor.pop()
+    Doctor.pop(0)
+    print('Done')
 
 
 def ShowDoc():
     print(Doctor)
 
 
+k = True
 while k == True:
     print('''
 1. Push Values

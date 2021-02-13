@@ -4,14 +4,16 @@
 
 with open("hp.txt", "w")as fo:
     fo.write("Harry Potter \n")
-    fo.write("There is a difference in all harry potter books\nWe can see it as harry grows\nthe books were written by J.K rowling ")
+    fo.write("There is a difference in all harry potter books\n")
+    fo.write('We can see it as harry grows\n')
+    fo.write('the books were written by J.K rowling')
 
 fo = open('hp.txt', 'r')
 fi = open('writehp.txt', 'w')
 l = fo.readlines()
 for i in l:
     if 'a' in i:
-        i = i.replace(i,'')
+        i = i.replace(i, '')
         fi.write(i)
     else:
         fi.write(i)

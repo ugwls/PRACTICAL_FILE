@@ -10,7 +10,11 @@ def word_separator():
         for i in doc:
             words = i.split()
             for a in words:
-                print(a+"#")
+                print(a + "#", end=' ')
+            print()
+
+
+word_separator()
 
 
 def countCharacterType():
@@ -18,15 +22,14 @@ def countCharacterType():
     consonant = 0
     lowercase = 0
     uppercase = 0
-    with open('26b.txt', "r") as f:
+    with open('26a.txt', "r") as f:
         s = f.read().split()
         for i in range(0, len(s)):
             ch = s[i]
-            if ((ch >= 'a' and ch <= 'z') or
-                    (ch >= 'A' and ch <= 'Z')):
+            if ((ch >= 'a' and ch <= 'z') or (ch >= 'A' and ch <= 'Z')):
                 if ch.islower():
                     lowercase += 1
-                if ch.isupper():
+                else:
                     uppercase += 1
                 ch = ch.lower()
 
@@ -40,3 +43,6 @@ def countCharacterType():
         print("Consonant:", consonant)
         print("LowerCase:", lowercase)
         print("UpperCase:", uppercase)
+
+
+countCharacterType()

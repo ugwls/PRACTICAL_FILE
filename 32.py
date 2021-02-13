@@ -1,16 +1,15 @@
 # Write a menu driven program where you are getting product
 # related details in a file product.txt. menu options are
-# 1. Add Details
-# 2. Search Details
-# 3. Show Details
-# 4. Exit
+# 1. Add Details, 2. Search Details, 3. Show Details, 4. Exit
 
 def add():
-    id = int(input('Enter product id: '))
-    name = input('Enter product name: ')
-    temp = (id, name)
     with open('product.txt', "a") as f:
-        f.write(f'{temp} \n')
+        a = int(input('Enter how many record to add: '))
+        for _ in range(0, a):
+            id = int(input('Enter product id: '))
+            name = input('Enter product name: ')
+            temp = (id, name)
+            f.write(f'{temp} \n')
     print('product added successfully')
     input('Press ENTER to continue...')
 
@@ -50,6 +49,9 @@ while k == True:
     elif option == 3:
         see()
     elif option == 4:
+        f = open('product.txt')
+        f.seek(0)
+        f.close()
         k = False
     else:
         print("Invalid Option!")

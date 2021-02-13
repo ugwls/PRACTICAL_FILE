@@ -7,7 +7,7 @@ import mysql.connector
 mydb = mysql.connector.connect(
     host="localhost",
     user="root",
-    passwd="dps123",
+    passwd="Ujjw@l.16",
     charset='utf8')
 cur = mydb.cursor()
 cur.execute('create database if not exists parctical')
@@ -18,7 +18,7 @@ table = '''
 create table if not exists file_table(
 name varchar(50),
 address varchar(50),
-phone_no varchar(30)
+phone_no varchar(30))
 '''
 cur.execute(table)
 mydb.commit()
@@ -79,7 +79,7 @@ while k == True:
 3.Delete Details
 4.See Details
 5.Exit''')
-    option = input('Enter your Options(1/5): ')
+    option = int(input('Enter your Options(1/5): '))
     if 0 <= option <= 4:
         if option == 1:
             add_Details()

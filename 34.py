@@ -6,7 +6,6 @@
 
 import pickle
 
-
 global global_flag, data_1
 global_flag = False
 data_1 = []
@@ -36,8 +35,9 @@ def Show_data():
         for j in range(0, len(data)):
             for i in range(0, len(data[j])):
                 if 20000 <= data[j][i][2] <= 30000:
-                    print(
-                        f'Ecode = {data[j][i][0]}, Name = {data[j][i][1]}, Salary = {data[j][i][2]}')
+                    print(f'Ecode = {data[j][i][0]}')
+                    print(f'Name = {data[j][i][1]}')
+                    print(f'Salary = {data[j][i][2]}')
                     flag = False
         if flag == True:
             print('No Entry Found!!!')

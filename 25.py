@@ -12,7 +12,7 @@
 
 def test(lst):
     result = map(sum, lst)
-    print(list(result))
+    print(f'Sum is: {list(result)}')
 
 
 lst = [(1, 2), (2, 3), (3, 4)]

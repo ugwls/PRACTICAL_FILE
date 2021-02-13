@@ -20,6 +20,7 @@ def InsertProd():
 
 def DeleteProd():
     product.pop()
+    print('Done')
 
 
 def ShowProd():

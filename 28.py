@@ -3,11 +3,11 @@
 # and update the marks.
 
 f = open('s1', 'w+b')
-n = int(input('Enter number of students:'))
+n = int(input('Enter number of students: '))
 for i in range(n):
-    name = input('Enter name of student:')
-    rollno = input('Enter rollno:')
-    marks = input('Enter marks:')
+    rollno = input('Enter rollno: ')
+    name = input('Enter name of student: ')
+    marks = input('Enter marks: ')
     bname = bytes(name, encoding='utf-8')
     brollno = bytes(rollno, encoding='utf-8')
     bmarks = bytes(marks, encoding='utf-8')
@@ -19,7 +19,7 @@ for i in range(n):
 f.seek(0)
 data = f.read()
 f.seek(0)
-sk = input('Enter the roll no whose marks need updatation :')
+sk = input('Enter the roll no whose marks need updatation: ')
 bsk = bytes(sk, encoding='utf-8')
 l = len(bsk)
 loc = data.find(bsk)
@@ -31,10 +31,7 @@ else:
     while f.read(1).isalpha():
         i = i+1
     f.seek(-1, 1)
-    marksu = input('Enter updated marks:')
+    marksu = input('Enter updated marks: ')
     bmarksu = bytes(marksu, encoding='utf-8')
     f.write(bmarksu)
-    print("Entire content of file after updation is :")
-    f.seek(0)
-    udata = f.read()
-    print(udata.decode())
+    print("Done")

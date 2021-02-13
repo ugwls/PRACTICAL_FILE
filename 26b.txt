@@ -1,4 +1,0 @@
-Read a text file line by line and display each
-word separated by a #. Read a text file and display
-the number of vowels/ consonants/ uppercase/ lowercase
-characters in the file.
