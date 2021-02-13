@@ -42,9 +42,9 @@ while k == True:
     n = int(input("Enter a number: "))
     if perfect_number(n) == True:
         print(n, " is a Perfect number!")
-    if armstrong(n) == True:
+    elif armstrong(n) == True:
         print(n, " is an Armstrong number!")
-    if palindrome(n) == True:
+    elif palindrome(n) == True:
         print("The number is a palindrome!")
     else:
         print("The number is a Unknow!")

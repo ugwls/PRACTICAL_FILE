@@ -11,11 +11,10 @@ def bubbleSort(arr):
 
 k = True
 while k == True:
-    arr = list(map(int, input('Enter a list of numbers: ').split(',')))
+    arr = list(
+        map(int, input('Enter a list of no.s(separated by commas): ').split(',')))
     bubbleSort(arr)
-    for i in range(len(arr)):
-        print(f'{arr[i]},', end='')
-    print()
+    print(arr)
     option = input('Do you want to try again(y/n): ').lower()
     if option == 'y':
         continue

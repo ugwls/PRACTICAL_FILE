@@ -10,7 +10,8 @@ def linearsearch(arr, x):
 
 k = True
 while k == True:
-    arr = list(map(int, input('Enter a list of numbers: ').split(',')))
+    arr = list(
+        map(int, input('Enter a list of numbers(separated by commas): ').split(',')))
     x = int(input('Enter a number: '))
     print("element found at index "+str(linearsearch(arr, x)))
     option = input('Do you want to try again.(y/n): ').lower()

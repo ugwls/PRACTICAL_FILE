@@ -4,8 +4,9 @@
 
 k = True
 while k == True:
-    arr = list(map(int, input('Enter a list of numbers: ').split(',')))
-    x = int(input('Enter a number: '))
+    arr = list(
+        map(int, input('Enter a list of no.s(separated by commas): ').split(',')))
+    x = int(input('Enter a no. to search: '))
     for i in range(0, len(arr) - 1):
         if arr[i] == x:
             print(f'Entered no. is in the list, At index number: {arr[i]}')

@@ -17,13 +17,15 @@ def binary_search(arr, x):
 
 k = True
 while k == True:
-    arr = list(map(int, input('Enter a list of numbers: ').split(',')))
-    x = int(input('Enter a number: '))
+    arr = list(
+        map(int, input('Enter a list of no.s(separated by commas): ').split(',')))
+    x = int(input('Enter a no. to search: '))
+    print(arr)
     result = binary_search(arr, x)
     if result == -1:
-        print(f'Element is present at index {result}')
-    else:
         print("Element is not present in array")
+    else:
+        print(f'Element is present at index {result}')
     option = input('Do you want to try again.(y/n): ').lower()
     if option == 'y':
         continue

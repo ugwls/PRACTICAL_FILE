@@ -11,7 +11,6 @@ for i in range(n):
     name = input("Name: ")
     marks = int(input("Marks: "))
     result[rno] = [name, marks]
-print(result)
 for student in result:
     if result[student][1] > 75:
-        print(result[student][0])
+        print(f'{result[student][0]} has marks more than 75')
