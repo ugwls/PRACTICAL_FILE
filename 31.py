@@ -3,11 +3,28 @@
 # The file1 and file2 are two files, which are pass
 # as arguments. Also, display the content of third file.
 
+import pickle
 
-def merge(f1, f2):
-    pass
+
+def add_content():
+    with open('file1.dat', 'ab') as f1, open('file2.dat', 'ab') as f2:
+        data_1 = ['ujjwal', 12, 'S1']
+        data_2 = ['garvit', 12, 'C1']
+        pickle.dump(data_1, f1)
+        pickle.dump(data_2, f2)
+
+
+def merge(file1, file2, file3):
+    with open(file1, 'rb') as f1, open(file2, 'rb') as f2:
+        data_1 = pickle.load(f1)
+        data_2 = pickle.load(f2)
+    with open(file3, 'ab') as f:
+        pickle.dump(data_1, f)
+        pickle.dump('\n', f)
+        pickle.dump(data_2, f)
 
 
 file1 = input('Enter file1 name(with extention): ')
 file2 = input('Enter file2 name(with extention): ')
-merge(file1, file2)
+file3 = input('Enter New file name(with extention): ')
+merge(file1, file2, file3)
