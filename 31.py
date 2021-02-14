@@ -6,14 +6,6 @@
 import pickle
 
 
-def add_content():
-    with open('file1.dat', 'ab') as f1, open('file2.dat', 'ab') as f2:
-        data_1 = ['ujjwal', 12, 'S1']
-        data_2 = ['garvit', 12, 'C1']
-        pickle.dump(data_1, f1)
-        pickle.dump(data_2, f2)
-
-
 def merge(file1, file2, file3):
     with open(file1, 'rb') as f1, open(file2, 'rb') as f2:
         data_1 = pickle.load(f1)
